@@ -101,7 +101,7 @@ int main(int argc, char *argv[]) {
 	// send message loop
 	int count = 256;
 	char* sMsg = "test";
-	char* rMsg;
+	char* rMsg = malloc(256);
 	clock_t start = clock();
 	while(count) {
 		sendMsg(sMsg, socketFD);

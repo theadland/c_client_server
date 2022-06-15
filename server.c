@@ -51,6 +51,7 @@ void handle_client(int client_socket, struct sockaddr_in clientAddress)
 	free(handshake);
 	debug_print("SERVER: I sent this HANDSHAKE from the client: \"%s\"\n", good_message);
 	
+	// Loop to respond client loop; timing test
 	char* msg = calloc(256, sizeof(char));
 	while(strcmp(msg, "done")) {
 		msg = readMsg(msg, client_socket);
